@@ -7,11 +7,14 @@
 
 import UIKit
 
-class AdventureViewController: UIViewController {
+class ViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var choiceButton1: UIButton!
-    @IBOutlet weak var choiceButton2: UIButton!
+    
+    @IBOutlet weak var background: UIStackView!
+    @IBOutlet weak var Question: UILabel!
+    @IBOutlet weak var Choice1: UIButton!
+    @IBOutlet weak var Choice2: UIButton!
+    
 
     var currentChoice: AdventureChoice?
 
@@ -47,32 +50,36 @@ class AdventureViewController: UIViewController {
 
     func updateUI() {
         guard let choice = currentChoice else { return }
-        titleLabel.text = choice.title
+        Question.text = choice.title
 
         if let next = choice.nextChoices {
-            choiceButton1.setTitle(next[0].title, for: .normal)
-            choiceButton1.isHidden = false
+            Choice1.setTitle(next[0].title, for: .normal)
+            Choice1.isHidden = false
 
-            choiceButton2.setTitle(next[1].title, for: .normal)
-            choiceButton2.isHidden = false
+            Choice2.setTitle(next[1].title, for: .normal)
+            Choice2.isHidden = false
         } else {
-            choiceButton1.isHidden = true
-            choiceButton2.isHidden = true
+            Choice1.isHidden = true
+            Choice2.isHidden = true
 
             if choice.isSuccessfulEnd == true {
-                titleLabel.text = "Success! 🎉\n\(choice.title)"
+                Question.text = "Success! 🎉\n\(choice.title)"
             } else {
-                titleLabel.text = "You failed. ☠️\n\(choice.title)"
+                Question.text = "You failed. ☠️\n\(choice.title)"
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        self.currentChoice = self.adventureStart
+                        self.updateUI()
             }
         }
     }
 
-    @IBAction func choice1Tapped(_ sender: UIButton) {
+    @IBAction func Choice1(_ sender: UIButton) {
         currentChoice = currentChoice?.nextChoices?[0]
         updateUI()
     }
 
-    @IBAction func choice2Tapped(_ sender: UIButton) {
+    @IBAction func Choice2(_ sender: UIButton) {
         currentChoice = currentChoice?.nextChoices?[1]
         updateUI()
     }
