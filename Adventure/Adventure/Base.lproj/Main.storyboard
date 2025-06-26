@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,20 +13,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="tPk-Oe-KXg">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LLq-Ph-ByK">
-                                <rect key="frame" x="30" y="50" width="333" height="704"/>
+                                <rect key="frame" x="30" y="50" width="380" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byW-ds-w6e">
-                                        <rect key="frame" x="36.666666666666686" y="0.0" width="260" height="260.66666666666669"/>
+                                        <rect key="frame" x="60" y="0.0" width="260" height="299.33333333333331"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="CbE-cx-NYM">
-                                                <rect key="frame" x="20" y="20.333333333333314" width="220" height="220"/>
+                                                <rect key="frame" x="20" y="39.666666666666686" width="220" height="220"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="rdv-fz-bxs"/>
                                                     <constraint firstAttribute="height" constant="220" id="tTP-oU-IdQ"/>
@@ -41,16 +41,16 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You crash-landed in the jungle. What do you do?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-DD-NGz">
-                                        <rect key="frame" x="26" y="260.66666666666663" width="281" height="260.66666666666663"/>
+                                        <rect key="frame" x="9" y="299.33333333333337" width="362" height="299.33333333333337"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pHo-7u-8CQ">
-                                        <rect key="frame" x="30" y="521.33333333333337" width="273" height="182.66666666666663"/>
+                                        <rect key="frame" x="30" y="598.66666666666663" width="320" height="209.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgX-QW-Ofh">
-                                                <rect key="frame" x="0.0" y="0.0" width="273" height="84"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                                     <backgroundConfiguration key="background" strokeWidth="3">
@@ -60,11 +60,11 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="Choice1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XvX-Jq-OAS"/>
+                                                    <action selector="Choice1UPD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKd-Pb-jx7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ja-dw-00y">
-                                                <rect key="frame" x="0.0" y="99" width="273" height="83.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="112" width="320" height="97.333333333333314"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                                     <backgroundConfiguration key="background" strokeWidth="3">
@@ -74,7 +74,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="Choice2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXm-QX-8FV"/>
+                                                    <action selector="CHoice2UPD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="84a-qb-gCd"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -102,8 +102,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Choice1" destination="qgX-QW-Ofh" id="P9c-vV-5fs"/>
-                        <outlet property="Choice2" destination="1ja-dw-00y" id="gvE-cC-vsG"/>
+                        <outlet property="Choice1" destination="qgX-QW-Ofh" id="i0m-ah-cIH"/>
+                        <outlet property="Choice2" destination="1ja-dw-00y" id="n2B-8B-veo"/>
                         <outlet property="Question" destination="9Qg-DD-NGz" id="2aQ-o9-AyW"/>
                         <outlet property="background" destination="LLq-Ph-ByK" id="N0D-xf-YTp"/>
                     </connections>
